@@ -12,6 +12,8 @@
   <div class="example-class">Second element with class</div>
   <button onclick="selectElements()">Select Elements</button>
   <hr>
+  
+  <!-- for <script> document.getElementByID() -->
 
   <!-- Elements for modifying examples -->
   <div id="text-element">Original text content</div>
@@ -111,6 +113,7 @@
       <button id="showAlert">Show Alert</button>
   </div>
 
+
   <script>
     // Existing JavaScript code...
 
@@ -120,7 +123,7 @@
     function selectElements() {
       // getElementById
       const elementById = document.getElementById('example-id');
-      console.log(elementById); // Outputs the element with ID 'example-id'
+      console.log("First element selected", elementById); // Outputs the element with ID 'example-id'
 
       // querySelector
       const firstElement = document.querySelector('.example-class');

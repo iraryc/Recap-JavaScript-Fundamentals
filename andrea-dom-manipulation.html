@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <!-- Our name and color example -->
+    <div id="myName">This is my name </div>
+    <div class="color">My First color class</div>
+    <div class="color">My Second color class</div>
+    <button onclick="selectElements()">Select Elements</button>
+    <button onclick="changeColor()">Change Color</button>
+  
+  <script>
+     function selectElements() {
+            const myNameElement = document.getElementById('myName');
+            console.log("First element selected", myNameElement);
+            const HTMLElementClassCollection = document.getElementsByClassName('color');
+            console.log("All classes", HTMLElementClassCollection);
+            console.log(HTMLElementClassCollection);  // Changed from console.dir to console.log
+            
+            myNameElement.addEventListener('click', SayHI);
+        }
+        function SayHI() {
+            const htmlElement = document.getElementById('myName');
+            htmlElement.innerHTML = '<strong>Color Green</strong>';
+            const styledElement = document.getElementById('myName');
+            styledElement.style.color = 'green';
+        }
+
+    function changeColor(){
+        //this is how you can change the innter text of the second color when clicking the button 
+        const HTMLElementClassCollection = document.getElementsByClassName('color');
+        HTMLElementClassCollection[1].innerHTML = "I changed the innerText";
+        
+
+    }
+</script>
+</body>
+</html>
