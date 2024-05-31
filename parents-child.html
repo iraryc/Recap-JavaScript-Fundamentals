@@ -6,6 +6,33 @@
     <title>Document</title>
 </head>
 <body>
+<div id="grandParent">
     
+    <div id="parent">
+       
+        <p id="child">
+            First child: 
+        </p>
+    </div>
+</div>
+<script>
+    // Accessing the parent element
+    const grandParent = document.getElementById('grandParent');
+    //console.dir(grandParent)
+    grandParent.innerHTML += 'Grandparents: Have some icecream and chips!';
+   
+    // Adding a new element to the parent
+
+    const parent = document.getElementById('parent');
+    parent.innerHTML += 'Parents: No, you have to eat your fruits and veggies';
+    
+    
+    const child = document.getElementById('child');
+    child.innerHTML = ' Child: I want icecream and chips';
+
+    // const newElementPartOfGrandParent = document.createElement('p');
+    // newElementPartOfGrandParent.textContent = "Say hi to my second child";
+    // grandParent.appendChild(newElementPartOfGrandParent);
+</script>
 </body>
 </html>
