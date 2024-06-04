@@ -35,4 +35,5 @@ function populateCityDropdown(){
     });
   
     dropdownElement.appendChild(fragment);
+
 }
